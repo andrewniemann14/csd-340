@@ -1,0 +1,64 @@
+h1 {
+  text-align: center;
+  font-family: Oswald, Verdana, Arial, sans-serif;
+}
+
+
+#left {
+  width: 45%;
+  font-family: Oswald, Verdana, Arial, sans-serif;
+  float: left;
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+#right {
+  width: 45%;
+  font-family: Oswald, Verdana, Arial, sans-serif;
+  float: right;
+  border: 1px dashed red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+ul {
+  list-style: upper-roman;
+}
+
+#last {
+  width: 100%;
+  margin-top: 60%;
+  margin-bottom: 20px;
+}
+
+#tiptop {
+  float: right;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+li {
+  font-weight: 300;
+}
+
+
+a {
+  font-family: Oswald, Verdana, Arial, sans-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+
+Apply a 1px solid red border with a 15px border-radius to the ordered list.
+Give the ordered list a padding of 10px (the numbers will need to be inside the border; research list-style and list-style-position)
+Apply 1 px dashed red border with a 15px border-radius to the unordered list. 
+Give the unordered list a padding of 10px and change the bullet points to upper-roman (research list-style and list-style-position)
+
+Give the bottom div a css value of float right and a margin-bottom of 20px */
