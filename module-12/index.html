@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stick the Landing</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+    
+    <!-- JS function to toggle popup contact form -->
+    <script type="text/javascript">
+      function toggle_popup(button) {
+        if (button.value == 0) {
+          button.value = 1;
+          document.getElementById("popup" + button.id.charAt(6)).style.transform = "scale(1)";
+        } else {
+          button.value = 0;
+          document.getElementById("popup" + button.id.charAt(6)).style.transform = "scale(0)";
+        }
+      }
+      </script>
+
+    <!-- JS function to scroll smoothly -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('a[href^="#"]').click(function(e) {
+          e.preventDefault();
+          $('html, body').animate({ scrollTop:
+            $($(this).attr('href')).offset().top}, 500, 'linear');
+        });
+      });
+    </script>
+
+  </head>
+
+
+  <body>
+
+    <nav>
+      <a href="#section1">Landing</a>
+      <a href="#section2">Hobbies</a>
+      <a href="#section3">Experience</a>
+      <a href="#section4">Contact Me</a>
+    </nav>
+    
+    <section class="page" id="section1">
+      <div class="header">
+        <h1>Welcome!</h1>
+        <!-- <h3></h3> -->
+      </div>
+      <a href="#section2" class="scroll-a"><span></span><span></span><span></span>scroll text</a>
+    </section>
+
+    <section class="page" id="section2">
+      <div class="header">
+        <h1>Hobbies</h1>
+      </div>
+      <br>
+      
+      <div class="card-div" id="hobbies">
+
+        <div class="card">
+          <div class="flipper">
+            <div class="front">
+              <img src="images/20210602_140335_3841.jpeg" alt="">
+            </div>
+            <div class="back">
+              <p>I'm not sure if having three little girls counts as a hobby, but it sure feels like one!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flipper">
+            <div class="front">
+              <img src="images/163-1639680_sprinting-man-silhouette-hd-png-download.png" alt="">
+            </div>
+            <div class="back">
+              <p>Whether lifting weights at the gymn, or sprinting around a block, I enjoy short, intense workouts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flipper">
+            <div class="front">
+              <img src="images/piano.jpg" alt="">
+            </div>
+            <div class="back">
+              <p>Playing the piano has been a constant source of enjoyment and relaxation at home.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <a href="#section3" class="scroll-a"><span></span><span></span><span></span>scroll text</a>
+    </section>
+
+    <section class="page" id="section3">
+      <div class="header">
+        <h1>Experience</h1>
+      </div>
+
+      <div class="card-div" id="experience">
+
+        <div class="card">
+          <div class="flipper">
+            <div class="front">
+              <img src="images/af2.jpg" alt="">
+            </div>
+            <div class="back">
+              <p>I served in the Air Force for 12 years as an airborne linguist specializing in the Korean language.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flipper">
+            <div class="front">
+              <img src="images/20210730_203134_1957.jpeg" alt="">
+            </div>
+            <div class="back">
+              <p>I've gained a wide range of experience, from vacuuming sidewalks to teaching college accredited classes in Intelligence Studies.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flipper">
+            <div class="front">
+              <img src="images/AdobeStock_51875542.jpeg" alt="">
+            </div>
+            <div class="back">
+              <p>With a B.S. in Software Development from Bellevue University, I plan to transition from military life into a new career field.</p>
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <a href="#section4" class="scroll-a"><span></span><span></span><span></span>scroll text</a>
+    </section>
+
+
+    <section class="page last-section" id="section4">
+      <div class="header">
+        <h1>Contact Me</h1>
+      </div>
+
+      <!-- contact form -->
+      <div id="contact-form-bg">
+        <form id="contact-form" action="" method="post">
+          <!-- left side -->
+          <div id="contact-left">
+            <input type="text" placeholder="First name" id="firstName">
+            <input type="text" placeholder="Last name" id="lastName">
+            <input type="text" placeholder="Email address" id="email">
+            <input type="button" value="Send" id="submitButton">
+          </div>
+          <!-- right side -->
+          <div id="contact-right">
+            <!-- <input type="text" placeholder="Message (optional)" id="message"> -->
+            <textarea placeholder="Message (optional)" id="message" wrap="soft"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <!-- arrows to the top -->
+      <div class="last-section-arrows">
+        <a href="#section1" class="scroll-a"><span></span><span></span><span></span>scroll text</a>
+        <a href="#section1" class="scroll-a"><span></span><span></span><span></span>scroll text</a>
+        <a href="#section1" class="scroll-a"><span></span><span></span><span></span>scroll text</a>
+      </div>
+    </section>
+
+
+
+
+      
+      <!-- SLIDE BUTTON AND POPUP
+      <div class="button-div">
+        <div class="button-slide"></div>
+        <button value=0 class="popup-button" id="button1" onclick="toggle_popup(this)">See More >>></button>
+      </div>
+
+      <div class="popup" id="popup1">
+        <div class="form">
+
+          <div class="form-field">
+            <label for="txtBookName">Book name:</label>
+            <input type="text" name="txtBookName" id="txtBookName" class="input">
+          </div>
+
+          <div class="form-field">
+            <button type="submit" class="btn btn-primary full-width">Create Book</button>
+          </div>
+
+          <button id="x" onclick="toggle_popup(button1)">X</button>
+
+        </div>
+      </div> -->
+
+
+
+
+
+
+  </body>
+</html>
+
+
+
+<!--
+Build an HTML5 landing page of yourself
+
+Header section
+
+Hobbies div
+3 columns representing your personal hobbies
+Use CSS cards (refer to what we used in the Build a Web Page exercises)
+Each card must include a brief description of what the card represents
+This section will be for your personal hobbies, include an image and text explaining why this is one of your favorite hobbies.
+
+Experience div
+3 columns representing your work experience/personal interests
+Use CSS cards (refer to what we used in the Build a Web page exercises)
+Each card must include a brief description of what the card represents
+This section will be for your personal work experience. If you are not working or have never worked, you can use potential children, parents, personal accomplishments, or personal embellishments.
+
+Contact div
+Contact form with the following fields
+First name
+Last name
+Email
+Button with the text “Send Message”
+
+
+
+
+-->
